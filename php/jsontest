@@ -1,0 +1,42 @@
+<?php
+
+$json = '{
+    "Product": [
+        {
+            "Product_Title": "Cloth",
+            "Product_Description": "Here is cloth",
+            "Price": "100",
+            "Category_ID": "1"
+        },
+        {
+            "Product_Title": "Cloth",
+            "Product_Description": "Here is cloth",
+            "Price": "100",
+            "Category_ID": "1"
+        },
+        {
+            "Product_Title": "Cloth",
+            "Product_Description": "Here is cloth",
+            "Price": "100",
+            "Category_ID": "1"
+        }
+    ]
+}
+';
+
+$json_decoded = json_decode($json);
+
+// Note, it's usually a bad idea to use use count() like this;
+// cache the count before the for() in a variable and use that.
+// This is for demo purposes only. :)
+for ($i = 0; $i < count($json_decoded->{'Product'}); $i++) {
+    echo "Products:
+" . $json_decoded->{'Product'}[$i]->{'Product_Title'} . "
+" . $json_decoded->{'Product'}[$i]->{'Product_Description'} . "
+" . $json_decoded->{'Product'}[$i]->{'Price'} . "
+" . $json_decoded->{'Product'}[$i]->{'Category_ID'} . "
+
+";
+}
+
+?>
