@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Page Title</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head> 
+
+<body>
+<div data-role="page" id="home">
+    <div data-role="content">
+        <ul data-role="listview" id="contributionList" data-split-icon="delete" data-split-theme="d">
+           <li id="l1"><a>5.00</a><a id="1" class="deleteMe"></a></li>
+           <li><a>10.00</a><a class="deleteMe"></a></li>
+           <li><a>15.00</a><a class="deleteMe"></a></li>
+           <li><a>20.00</a><a class="deleteMe"></a></li>
+           <li><a>25.00</a><a class="deleteMe"></a></li>
+           <li><a>50.00</a><a class="deleteMe"></a></li>
+           <li><a>100.00</a><a class="deleteMe"></a></li> 
+        </ul>
+        <br />
+        <fieldset class="ui-grid-a">
+           <div class="ui-block-a">
+              <input type="text" placeholder="Add new Amount" id="contributionAmount" />
+           </div>
+           <div class="ui-block-b">
+             <input type="button" value="Add" id="addContribution"/>
+           </div>
+        </fieldset>
+    
+    </div>
+</div>
+</body>
